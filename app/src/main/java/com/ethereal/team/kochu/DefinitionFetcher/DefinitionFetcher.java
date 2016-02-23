@@ -1,5 +1,7 @@
 package com.ethereal.team.kochu.DefinitionFetcher;
 
+import android.util.Log;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +28,7 @@ public class DefinitionFetcher
         try
         {
             Document document = Jsoup.connect("http://www.bing.com/search?q=define+"+word).get();
+            Log.v("Document",document.toString());
             if (hasChildrenOfClass(document.getElementById("b_content"), "dc_pds"))
             {
                 Elements elements = document.getElementsByClass("dc_pd");
