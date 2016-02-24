@@ -38,13 +38,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         dataViewHolder.tvUseOf.setText(data.getExample());
       //  dataViewHolder.tvSynonym.setText(data.syno);
 
-        String[] textArray = {"One", "Two", "Three", "Four", "Five" , "Six", "Seven" , "Eight", "Nine"};
-
         dataViewHolder.linearLayout.setOrientation(LinearLayout.HORIZONTAL);
 
-        for (int t = 0; t < 8; t++) {
+        for (String str:data.getSynonyms())
+        {
             final TextView txt = new TextView(context);
-            txt.setText(textArray[t]);
+            txt.setText(str);
             txt.setTextSize(17);
             txt.setLayoutParams(new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT,

@@ -31,7 +31,7 @@ public class DefinitionFetcher
             Log.v("Document",document.toString());
             if (hasChildrenOfClass(document.getElementById("b_content"), "dc_pds"))
             {
-                Elements elements = document.getElementsByClass("dc_pd");
+                Elements elements = document.getElementsByClass("dc_pdm");
                 for (Element element : elements)
                 {
                     Elements dc_st = element.getElementsByClass("dc_st");
